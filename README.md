@@ -4,6 +4,17 @@ A machine learning web application that classifies text messages as **Spam** or 
 
 The project uses TF-IDF for text vectorization and a tuned Multinomial Naive Bayes classifier.
 
+## 🌐 Live Demo
+
+Try the deployed application here:
+
+**[Open Spam Message Detector](https://aditya-spam-detector.streamlit.app/)**
+
+## 📸 Application Preview
+
+![Spam Message Detector](assets/app-screenshot.png)
+
+
 ## 🚀 Features
 
 - Classifies messages as Spam or Ham
