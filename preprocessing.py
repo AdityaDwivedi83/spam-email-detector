@@ -1,7 +1,12 @@
 import string
+import nltk
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+
+nltk.download("punkt", quiet=True)
+nltk.download("punkt_tab", quiet=True)
+nltk.download("stopwords", quiet=True)
 
 
 def clean_text(text):
