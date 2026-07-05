@@ -42,13 +42,18 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 
 # Create and fit vectorizer
-vectorizer = TfidfVectorizer(
-    tokenizer=clean_text,
-    token_pattern=None
+X_train_clean = X_train.apply(
+    lambda text: " ".join(clean_text(text))
 )
 
-X_train_tfidf = vectorizer.fit_transform(X_train)
-X_test_tfidf = vectorizer.transform(X_test)
+X_test_clean = X_test.apply(
+    lambda text: " ".join(clean_text(text))
+)
+
+vectorizer = TfidfVectorizer()
+
+X_train_tfidf = vectorizer.fit_transform(X_train_clean)
+X_test_tfidf = vectorizer.transform(X_test_clean)
 
 
 # Train final model
